@@ -1,0 +1,20 @@
+<?php
+require "init.php";
+$gname=$_POST['gname'];
+$name=$_POST['name'];
+$number=$_POST['number'];
+$query="select * from group2 where gname='$gname'";
+$res=mysqli_query($conn,$query);
+$test=0;
+if($test=$res->num_rows>0)
+echo "Group already exist";
+else
+{
+	$query2="insert into group2 values('$gname','$number')";
+	mysqli_query($conn,$query2);
+	$query3="insert into gmember values('$gname','$name','$number')";
+	mysqli_query($conn,$query3);
+	echo "Group created";
+}
+mysqli_close($conn);
+?>

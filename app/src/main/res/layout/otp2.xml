@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#08344f">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="200dp"
+        android:background="@drawable/roundcorner"
+        android:id="@+id/linear2"
+        android:orientation="vertical"
+        android:gravity="center"
+        android:layout_marginTop="149dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+      android:padding="15dp"
+        android:weightSum="1">
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@drawable/otp2"
+            android:id="@+id/imageView6"
+            android:layout_marginTop="12dp"
+            android:layout_weight="0.01" />
+
+        <EditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:hint="Enter Your OTP"
+            android:id="@+id/user_otp"
+            android:textColor="#03A9F4"
+            android:textColorHint="@color/white"
+            android:layout_gravity="center_horizontal"
+            android:inputType="number"
+            android:textSize="20dp"
+            android:layout_marginLeft="5dp"
+
+            android:layout_weight="0.65" />
+
+    </LinearLayout>
+        <Button
+            android:layout_width="250dp"
+            android:layout_height="40dp"
+            android:text="LOGIN AND EXPLORE"
+            android:textColor="@color/white"
+            android:layout_marginBottom="10dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="20dp"
+            android:onClick="userLogin"
+            android:background="@drawable/roundbutton"
+            android:textStyle="normal|bold"
+            android:textSize="16sp"
+            android:id="@+id/button2" />
+
+
+
+    </LinearLayout>
+
+</RelativeLayout>

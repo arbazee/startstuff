@@ -1,0 +1,34 @@
+<?php
+require "init.php";
+$gmember=$_POST['gmember'];
+$gname=$_POST['gname'];
+$gmember=str_replace("[","",$gmember);
+$gmember=str_replace("]","",$gmember);
+$gmember=str_replace("(","",$gmember);
+$gmember=str_replace(")","",$gmember);
+$gmember=str_replace("-","",$gmember);
+$gmember=str_replace(" ","",$gmember);
+$value=explode(",",$gmember);
+for($i=0;	$i<sizeof($value);	$i++)
+{
+	$query="select name from register where mobile='$value[$i]'";
+	$res=mysqli_query($conn,$query);
+	$check=0;
+	if($check=$res->num_rows>0)
+	{
+		$row=mysqli_fetch_row($res);
+		$name=$row[0];
+		$num=$row[1];
+		$check="select * from gmember where number='$num' and gname='$gname'";
+		$res2=mysqli_query($conn,$check);
+		$c=$res2->num_rows;
+		if($c==0)
+		{
+		$query2="insert into gmember values('$gname','$name','$value[$i]')";
+		mysqli_query($conn,$query2);
+		}
+	}
+}
+echo "success";
+mysqli_close($conn);
+?>

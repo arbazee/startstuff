@@ -1,0 +1,161 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    android:id="@+id/main_layout"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".TabChat"
+    android:weightSum="1">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark"
+        android:minHeight="?attr/actionBarSize"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:titleTextColor="@android:color/white"
+        android:background="#01579B"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        android:theme="@style/ToolbarTheme"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light"
+    </android.support.v7.widget.Toolbar>
+
+    <android.support.design.widget.TabLayout
+        android:id="@+id/tab_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/toolbar"
+        android:background="#0277BD"
+        android:elevation="6dp"
+        android:minHeight="?attr/actionBarSize"
+        android:theme="@style/intabs"
+        app:tabMode="fixed"
+        app:tabGravity="fill"
+        app:tabTextColor="#c9caca"
+        app:tabSelectedTextColor="#fff"/>
+
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="317dp"
+        android:layout_below="@id/tab_layout"
+
+        android:layout_weight="0.98" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:layout_marginBottom="5dp"
+        android:layout_below="@+id/grid"
+        android:background="#E0E0E0"
+        android:layout_weight="0.26">
+
+        <LinearLayout
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.24">
+
+            <ImageButton
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/btn1"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="27dp"
+                android:src="@drawable/forum_icon"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Forums"
+                android:textColor="#039BE5"
+                android:layout_gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            android:layout_weight="0.25">
+
+            <ImageButton
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/btn2"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="30dp"
+                android:src="@drawable/news_icon"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="News"
+                android:textColor="#D50000"
+                android:layout_gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="2dp"
+            android:layout_weight="0.24">
+
+            <ImageButton
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/btn3"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="28dp"
+                android:src="@drawable/feeds_icon"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Feeds"
+                android:textColor="#311B92"
+                android:layout_gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="18dp"
+            android:layout_height="match_parent"
+            android:layout_marginTop="2dp"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            android:layout_weight="0.23">
+
+            <ImageButton
+                android:layout_height="30dp"
+                android:layout_width="30dp"
+                android:id="@+id/btn4"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="35dp"
+                android:src="@drawable/service_icon"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Services"
+                android:textColor="#00796B"
+                android:layout_gravity="center"
+                android:textSize="12sp" />
+        </LinearLayout>
+    </LinearLayout>
+</LinearLayout>

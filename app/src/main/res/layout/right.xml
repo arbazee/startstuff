@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/rightside">
+
+    <FrameLayout
+        android:id="@+id/outgoing_layout_bubble"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:background="@drawable/balloon_outgoing_normal"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentEnd="true">
+        <TextView
+            android:id="@+id/msgr"
+            android:layout_height="wrap_content"
+            android:layout_width="wrap_content"
+            android:paddingRight="20dp"
+            android:text="Raju Veeragoudar is a good boy but fgdghhjhg he does not know what he wants."
+            style="@style/chat_text_message_style"/>
+
+    </FrameLayout>
+
+</RelativeLayout>
+
+
+
+

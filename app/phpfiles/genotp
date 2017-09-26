@@ -1,0 +1,42 @@
+<?php
+require "init.php";
+$num=$_POST['login_pass'];
+$name=$_POST['login_name'];
+$otpnum=0;
+$otpnum=rand(1000,9000);
+$query="select mobile from register where mobile='$num'";
+$resul = mysqli_query($conn,$query);
+if($test=$resul->num_rows>0)
+{
+	echo "User already registered";
+	mysqli_close($conn);
+}
+else
+{
+	$message = urlencode("Hello! Welcome to Startstuff. Your OTP is $otpnum");
+	$url = "http://sendsms.sandeshwala.com/API/WebSMS/Http/v1.0a/index.php?username=VRITKA&password=VRITKA&sender=VRITKA&to=".$num."&message=".$message."&reqid=1&format={json|text}&route_id=205&apikey=434aa936-3153-4228-a506-c9be1b6b948c";
+
+	// init the resource
+    $ch = curl_init();
+    curl_setopt_array($ch, array(CURLOPT_URL => $url,CURLOPT_RETURNTRANSFER => true,CURLOPT_POST => true
+			//,CURLOPT_POSTFIELDS => $postData
+            //,CURLOPT_FOLLOWLOCATION => true
+    ));
+
+	//Ignore SSL certificate verification
+    curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+    curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+
+	//get response
+    $output = curl_exec($ch);
+
+	//Print error if any
+    if (curl_errno($ch)) {
+        echo 'error:' . curl_error($ch);
+    }
+
+    curl_close($ch);
+	echo "$otpnum";
+	mysqli_close($conn);
+}
+?>

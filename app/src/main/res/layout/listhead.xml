@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/relativelay"
+    android:layout_width="fill_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/groupback">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="100dp"
+        android:layout_below="@+id/grid"
+        android:layout_centerHorizontal="true"
+        android:weightSum="1">
+
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_weight="0.21">
+
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img4"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/teachers"
+                android:background="@null"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Teachers"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="3dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:id="@+id/textView" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_weight="0.31">
+
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img5"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="30dp"
+                android:layout_marginRight="25dp"
+                android:background="@null"
+                android:src="@drawable/human_resource" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="HR's"
+                android:layout_marginLeft="12dp"
+                android:layout_marginTop="5dp"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="15sp"
+                android:id="@+id/textView5" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img3"
+                android:scaleType="fitXY"
+                android:layout_marginLeft="30dp"
+                android:background="@null"
+                android:src="@drawable/lawyers" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Lawyers"
+                android:textColor="#ffffff"
+                android:layout_marginLeft="8dp"
+                android:layout_marginTop="5dp"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="15sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:id="@+id/grid"
+        android:orientation="horizontal"
+        android:layout_marginTop="10dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:weightSum="1">
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img1"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="25dp"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:src="@drawable/startups" />
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="2dp"
+                android:text="Startup"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="110dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:orientation="vertical"
+            android:layout_weight="0.31">
+
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img2"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/entrepreneurs" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="10dp"
+                android:layout_marginTop="5dp"
+                android:text="Entrepreneur"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:textStyle="normal"
+                android:textSize="15sp" />
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="120dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:orientation="vertical">
+
+            <ImageButton
+                android:layout_height="70dp"
+                android:layout_width="70dp"
+                android:id="@+id/img6"
+                android:scaleType="fitXY"
+                android:background="@null"
+                android:layout_marginLeft="28dp"
+                android:layout_marginRight="25dp"
+                android:src="@drawable/ca_icon"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CA's"
+                android:textColor="#ffffff"
+                android:layout_gravity="center"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="5dp"
+                android:textStyle="normal"
+                android:textSize="15sp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>
